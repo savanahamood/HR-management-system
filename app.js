@@ -66,6 +66,7 @@ Hadi.netSalarytax()
 
 Employee.prototype.render = function () {
     console.log(`The Employee Name: ${this.FullName} and his salary is ${this.Salary}`)
+document.write(`<h4> The Employee Name: ${this.FullName} and his salary is ${this.Salary}</h4>`)
 }
 Ghazi.render();
 Lana.render();
