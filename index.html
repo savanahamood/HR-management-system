@@ -9,14 +9,53 @@
 </head>
 
 <body>
-    <header>
+    <header id="myHeader">
 
         <a id="home" href="./index.html">Home</a>
         <a id="accounting" href="./accounting.html">Accounting</a>
+        <h1>Employee Data</h1>
 
     </header>
     <main>
-        <h1>Employee Data</h1>
+        <section>
+            <form id="employeesForm">
+                <fieldset>
+                    <legend>Adding New Employee</legend>
+                    <label for="">FullName</label>
+                    <input type="text" id="FullName" name="FullName" placeholder="Please Enter Your Full Name" />
+
+                    <p>Choose your Present Department </p>
+
+                      <input type="radio" id="Administration" name="Administration" value="Administration">
+                      <label for="Administration">Administration</label><br>
+                      <input type="radio" id="Marketing" name="Marketing" value="Marketing">
+                      <label for="Marketing">Marketing</label><br>
+                      <input type="radio" id="Development" name="Development" value="Development">
+                      <label for="Development">Development</label><br>
+                      <input type="radio" id="Finance" name="Finance" value="Finance">
+                      <label for="Finance">Finance</label><br>
+
+                    <p>Choose your Level </p>
+
+                      <input type="radio" id="Junior" name="Junior" value="Junior">
+                      <label for="Junior">Junior</label><br>
+                      <input type="radio" id="MidSenior" name="MidSenior" value="MidSenior">
+                      <label for="MidSenior">MidSenior</label><br>
+                      <input type="radio" id="Senior" name="Senior" value="Senior">
+                      <label for="Senior">Senior</label><br>
+                    <br>
+                    <label for="image">Image Link</label>
+                    <input type="text" id="image" name="image" />
+                    <br>
+                    <br>
+                    <br>
+                    <input type="submit" id="" name="" value="Submit" />
+
+
+                </fieldset>
+            </form>
+        </section>
+        <section id="employeesSection"></section>
         <script src="./app.js"></script>
     </main>
     <footer>
@@ -24,7 +63,7 @@
         <a href="https://www.linkedin.com/in/savana-hamood-bb4457127/">Linkedin</a>
         <p> ©2023. All Rights Are Reserved</p>
     </footer>
-   
+
 </body>
 
 </html>
