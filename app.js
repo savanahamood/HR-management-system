@@ -2,57 +2,35 @@
 let employeesSectionEl = document.getElementById('employeesSection');
 let myForm = document.getElementById('employeesForm');
 let employees = [];
-function Employee(FullName, Department, Level, ImageURL, Salary) {
+function Employee( EmployeeID,FullName, Department, Level, ImageURL,) {
+    console.log(`name:${FullName}`);
     this.EmployeeID = 0;
     this.FullName = FullName;
     this.Department = Department;
     this.Level = Level;
     this.ImageURL = ImageURL;
-    this.Salary = Salary;
+    //this.Salary = Salary;
     employees.push(this);
 
 }
 
 myForm.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
+
     event.preventDefault();
+    console.log(event.target);
     let fullName = event.target.FullName.value;
-    let administration = event.target.Administration.checked;
-   /*  if (administration) {
-        this.Department = "administration";
-    } */
-    let marketing = event.target.Marketing.checked;
-    /* if (marketing) {
-        this.Department = "marketing";
-    } */
-    let development = event.target.Development.checked;
-    /* if (development) {
-        this.Department = "development";
-    } */
-    let finance = event.target.Finance.checked;
-   /*  if (finance) {
-        this.Department = "finance";
-    } */
-    let junior = event.target.Junior.checked;
-    /* if (junior) {
-        this.Level = "junior";
-    } */
-    let midSenior = event.target.MidSenior.checked;
-   /*  if (midSenior) {
-        this.Level = "midSenior";
-    } */
-    let senior = event.target.Senior.checked;
-    /* if (senior) {
-        this.Level = "senior";
-    } */
-    let image = event.target.image.value;
+    let department = event.target.Department.value;
+    let level = event.target.Level.value;
+    let image = event.target.Image.value;
 
-    // let Lana = new Employee("Lana Ali", "Finance", "Senior", "./img/img2f.jpg");
 
-    let newemployee = new Employee(fullName, administration, marketing, development, finance, junior, midSenior, senior, image)
-newemployee.calculateID(1000,9999);
+    
+//
+    let newemployee = new Employee(this.EmployeeID, fullName, department, level,image);
+    newemployee.calculateID(1000,9999);
+    console.log(newemployee);
 newemployee.render();
-
 
 }
 /* function headerRender(){
@@ -71,10 +49,10 @@ let Rana = new Employee("Rana Saleh", "Development", "Junior", "./img/img4f.jpg"
 let Hadi = new Employee("Hadi Ahmad", "Finance", "Midsenior", "./img/img7.jpg");
  */
 //console.log(Ghazi);
-function getRndInteger(min, max) {
+/* function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-Employee.prototype.netSalary = function (min, max) {
+} */
+/* Employee.prototype.netSalary = function (min, max) {
 
     if (this.Level == "Senior") {
         this.Salary = getRndInteger(1500, 2000)
@@ -94,9 +72,9 @@ Tamara.netSalary()
 Safi.netSalary()
 Omar.netSalary()
 Rana.netSalary()
-Hadi.netSalary()
+Hadi.netSalary() */
 
-Employee.prototype.netSalarytax = function (min, max) {
+/* Employee.prototype.netSalarytax = function (min, max) {
     if (this.Level == "Senior") {
         var a = getRndInteger(1500, 2000)
         this.Salary = a - (0.075 * a);
@@ -115,27 +93,29 @@ Tamara.netSalarytax()
 Safi.netSalarytax()
 Omar.netSalarytax()
 Rana.netSalarytax()
-Hadi.netSalarytax()
+Hadi.netSalarytax() */
 
 Employee.prototype.calculateID = function (min, max) {
     this.EmployeeID = Math.floor(Math.random() * (max - min)) + min;
 }
-function headerRender() {
 
-}
 Employee.prototype.render = function () {
     //console.log(`The Employee Name: ${this.FullName} and his salary is ${this.Salary}`)
     // document.write(`<h4> The Employee Name: ${this.FullName} and his salary is ${this.Salary} and ${this.EmployeeID}</h4>`)
+    
+   
+    let card = document.createElement('div');
+    employeesSectionEl.appendChild(card);
 
-    const imgEl = document.createElement('img');
+    let imgEl = document.createElement('img');
     imgEl.src = this.ImageURL;
-    employeesSectionEl.appendChild(imgEl);
+    card.appendChild(imgEl);
 
-    const employeesNameEl = document.createElement('h3');
+    let employeesNameEl = document.createElement('h3');
     employeesNameEl.textContent = `Name:${this.FullName}`;
-    employeesSectionEl.appendChild(employeesNameEl);
+    card.appendChild(employeesNameEl);
 
-    const employeeIDEl = document.createElement('p');
+    /* const employeeIDEl = document.createElement('p');
     employeeIDEl.textContent = `ID:${this.EmployeeID}`;
     employeesSectionEl.appendChild(employeeIDEl);
 
@@ -145,16 +125,21 @@ Employee.prototype.render = function () {
 
     const levelEl = document.createElement('p');
     levelEl.textContent = `Level:${this.Level}`;
-    employeesSectionEl.appendChild(levelEl);
+    employeesSectionEl.appendChild(levelEl); */
+
 
     /*  const salaryEl=document.createElement('p');
      salaryEl.textContent=this.Salary;
      employeesSectionEl.appendChild(salaryEl); */
+     let par = document.createElement('p');
 
+     par.textContent = `ID: ${this.EmployeeID} \n - Department: ${this.Department} \n - Level: ${this.Level}`;
+     card.appendChild(par);
 
 }
+console.log(this.Department);
 
-headerRender();
+//headerRender();
 
 /* Ghazi.render();
 Lana.render();
@@ -165,6 +150,6 @@ Rana.render();
 Hadi.render(); */
 for (let i = 0; i < employees.length; i++) {
     employees[i].calculateID(1000, 9999);
-    employees[i].netSalarytax();
+    //employees[i].netSalarytax();
     employees[i].render();
 }

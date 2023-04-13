@@ -1,0 +1,46 @@
+section {
+   color: rgb(180, 72, 230);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: last baseline;
+  }
+  
+
+
+
+  header{
+    text-align: center;
+    justify-content:space-between;
+    background-color:rgb(99, 216, 245);
+    color:blue;
+    
+  }
+  
+  
+  #home{
+    margin-right: 400px;
+    margin-left: 50px;
+  }
+
+  footer {
+    text-align: center;
+    justify-content:space-between;
+    display:flex;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgb(99, 216, 245);
+    color:blue;
+    height: 40px;
+    
+}
+
+  
+    
+
+    
+    
+   
+   
