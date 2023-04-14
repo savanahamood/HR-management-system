@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
@@ -14,48 +16,90 @@
         <a id="home" href="./index.html">Home</a>
         <a id="accounting" href="./accounting.html">Accounting</a>
         <h1>Employee Data</h1>
+<br>
+<br>
 
     </header>
+    
     <main>
         <section>
+            <br>
+
             <form id="employeesForm">
+                <br>
+                <br>
+                <br>
+                <br>
+                
                 <fieldset>
+                    <br>
+
                     <legend>Adding New Employee</legend>
                     <label for="">FullName</label>
                     <input type="text" id="FullName" name="FullName" placeholder="Please Enter Your Full Name" />
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 
-                    <p>Choose your Present Department </p>
+                    <!--                     <p>Choose your Present Department </p> -->
 
-                      <input type="radio" id="Administration" name="Administration" value="Administration">
+                    <!--    <input type="radio" id="Administration" name="Administration" value="Administration">
                       <label for="Administration">Administration</label><br>
                       <input type="radio" id="Marketing" name="Marketing" value="Marketing">
                       <label for="Marketing">Marketing</label><br>
                       <input type="radio" id="Development" name="Development" value="Development">
                       <label for="Development">Development</label><br>
                       <input type="radio" id="Finance" name="Finance" value="Finance">
-                      <label for="Finance">Finance</label><br>
+                      <label for="Finance">Finance</label><br> -->
 
-                    <p>Choose your Level </p>
+
+                    <label for="Department">Choose a Department:</label>
+                    <select name="Department" id="Department">
+                        <option value="Administration">Administration</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Development">Development</option>
+                        <option value="Finance">Finance</option>
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <label for="Level">Choose a Level:</label>
+                    <select name="Level" id="Level">
+                        <option value="Juior">Juior</option>
+                        <option value="Mid-senior">Mid-senior</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                    <!-- <p>Choose your Level </p>
 
                       <input type="radio" id="Junior" name="Junior" value="Junior">
                       <label for="Junior">Junior</label><br>
                       <input type="radio" id="MidSenior" name="MidSenior" value="MidSenior">
                       <label for="MidSenior">MidSenior</label><br>
                       <input type="radio" id="Senior" name="Senior" value="Senior">
-                      <label for="Senior">Senior</label><br>
+                      <label for="Senior">Senior</label><br> -->
                     <br>
-                    <label for="image">Image Link</label>
-                    <input type="text" id="image" name="image" />
+                    <br>
+
+                    <label for="Image">Image Link</label>
+                    <input type="text" id="Image" name="Image" />
                     <br>
                     <br>
                     <br>
                     <input type="submit" id="" name="" value="Submit" />
 
+                    <br>
+                    <br>
+
 
                 </fieldset>
             </form>
         </section>
-        <section id="employeesSection"></section>
+        <section id="employeesSection">
+            <div class="cadDiv" id="cadDiv"></div>
+
+        </section>
         <script src="./app.js"></script>
     </main>
     <footer>
