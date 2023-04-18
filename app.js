@@ -33,21 +33,16 @@ function handleSubmit(event) {
 newemployee.render();
 
 }
-/* function headerRender(){
-    const h1El=document.createElement("h1");
-let header = document.getElementById("myHeader");
-h1El.textContent='Employee Data';
-header.appendChild(h1El);
-}
- */
-/* let Ghazi = new Employee("Ghazi Samer", "Administration", "Senior", "./img/img1.jpg");
-let Lana = new Employee("Lana Ali", "Finance", "Senior", "./img/img2f.jpg");
-let Tamara = new Employee("Tamara Ayoub", "Marketing", "Senior", "./img/img3f.jpg");
-let Safi = new Employee("Safi Walid", "Administration", "Midsenior", "./img/img5.jpg");
-let Omar = new Employee("Omar Zaid", "Development", "Senior", "./img/img6.jpg");
-let Rana = new Employee("Rana Saleh", "Development", "Junior", "./img/img4f.jpg");
-let Hadi = new Employee("Hadi Ahmad", "Finance", "Midsenior", "./img/img7.jpg");
- */
+
+
+let Ghazi = new Employee("1000","Ghazi Samer", "Administration", "Senior", "assest/img1.jpg");
+let Lana = new Employee("1001","Lana Ali", "Finance", "Senior", "assest/img2f.jpg");
+let Tamara = new Employee("1002","Tamara Ayoub", "Marketing", "Senior", "assest/img4f.jpg");
+let Safi = new Employee("1003","Safi Walid", "Administration", "Midsenior", "assest/img5.jpg");
+let Omar = new Employee("1004","Omar Zaid", "Development", "Senior", "assest/img6.jpg");
+let Rana = new Employee("1005","Rana Saleh", "Development", "Junior", "assest/img3f.jpg");
+let Hadi = new Employee("1006","Hadi Ahmad", "Finance", "Midsenior", "assest/img7.jpg");
+
 //console.log(Ghazi);
 /* function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -104,15 +99,17 @@ Employee.prototype.render = function () {
     // document.write(`<h4> The Employee Name: ${this.FullName} and his salary is ${this.Salary} and ${this.EmployeeID}</h4>`)
     
    
-    let card = document.createElement('div');
+    let card = document.createElement('div1');
     employeesSectionEl.appendChild(card);
-
+let card2 =document.createElement("div2");
+card.appendChild(card2);
     let imgEl = document.createElement('img');
     imgEl.src = this.ImageURL;
-    card.appendChild(imgEl);
+   
+    card2.appendChild(imgEl);
 
-    let employeesNameEl = document.createElement('h3');
-    employeesNameEl.textContent = `Name:${this.FullName}`;
+    let employeesNameEl = document.createElement('p');
+    employeesNameEl.textContent = `Name:${this.FullName}-ID: ${this.EmployeeID}`;
     card.appendChild(employeesNameEl);
 
     /* const employeeIDEl = document.createElement('p');
@@ -133,7 +130,7 @@ Employee.prototype.render = function () {
      employeesSectionEl.appendChild(salaryEl); */
      let par = document.createElement('p');
 
-     par.textContent = `ID: ${this.EmployeeID} \n - Department: ${this.Department} \n - Level: ${this.Level}`;
+     par.textContent = ` Department: ${this.Department} \n - Level: ${this.Level}`;
      card.appendChild(par);
 
 }

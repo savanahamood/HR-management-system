@@ -1,46 +1,117 @@
 section {
-   color: rgb(180, 72, 230);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: last baseline;
-  }
-  
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
 
-
-
-  header{
-    text-align: center;
-    justify-content:space-between;
-    background-color:rgb(99, 216, 245);
-    color:blue;
-    
-  }
-  
-  
-  #home{
-    margin-right: 400px;
-    margin-left: 50px;
-  }
-
-  footer {
-    text-align: center;
-    justify-content:space-between;
-    display:flex;
-
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:rgb(99, 216, 245);
-    color:blue;
-    height: 40px;
-    
 }
 
-  
-    
+fieldset{
+  width: 350px;
+  border-radius: 10px;
+  border-width: 10px;
 
-    
-    
-   
-   
+}
+
+
+header {
+  /* text-align: center; */
+  /* justify-content:space-between; */
+  /* background-color:rgb(99, 216, 245); */
+  color: white;
+  /* display:flex; */
+  /* flex-direction: row; */
+  background-color: #477d57;
+
+
+
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px;
+
+
+}
+
+a {
+  color: white;
+}
+
+#title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#477d57;
+  height: 40px;
+
+}
+
+img {
+  display: flex;
+  width: 150Px;
+  height: 200px;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+p {
+  color: aliceblue;
+  padding: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/* 
+    #sora{
+      display: flex;
+      width: 150Px;
+      height: 200px;
+    }
+
+     */
+
+div1 {
+  background-color: #477d57;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 30%;
+  flex-direction: column;
+  margin: 30px;
+
+}
+
+div2 {
+  background-color: white;
+  width: 200px;
+  height: 250px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+/* CSS */
+
+#submit {
+ padding: 10px;
+color: white;
+background-color:#477d57
+
+}
+
